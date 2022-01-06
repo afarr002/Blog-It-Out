@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Post } = require("../../models");
+const signedInAuth = require("../../utils/signedInAuth");
 
-router.post("/", async (req, res) => {
+router.post("/", signedInAuth, async (req, res) => {
   const template = req.body;
 
   try {
@@ -15,7 +16,7 @@ router.post("/", async (req, res) => {
   }
 });
 
-router.put("/:id", async (req, res) => {
+router.put("/:id", signedInAuth, async (req, res) => {
   try {
     const [updatedData] = await Post.update(req.body, {
       where: {
@@ -33,7 +34,7 @@ router.put("/:id", async (req, res) => {
   }
 });
 
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", signedInAuth, async (req, res) => {
   try {
     const [deletedData] = Post.destroy({
       where: {

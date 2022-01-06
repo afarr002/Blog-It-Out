@@ -1,7 +1,8 @@
 const router = require("express").Router();
 const { Comment } = require("../../models");
+const signedInAuth = require("../../utils/signedInAuth");
 
-router.post("/", async (req, res) => {
+router.post("/", signedInAuth, async (req, res) => {
   const template = req.body;
 
   try {
