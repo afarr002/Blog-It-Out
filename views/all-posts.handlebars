@@ -1,3 +1,4 @@
+{{#if posts}}
 <div class="posts">
     {{#each posts}}
     <article class="card">
@@ -15,3 +16,19 @@
     </article>
     {{/each}}
 </div>
+{{else}}
+<div class="posts">
+    <article class="card">
+        <div class="card-header flex-row justify-space-between">
+            <h2>
+                Currently there's no posts!
+            </h2>
+            <div>
+                Sign Up/Sign In and be our first blog post! 
+            </div>
+        </div>
+        <div class="card-body">
+        </div>
+    </article>
+</div>
+{{/if}}
