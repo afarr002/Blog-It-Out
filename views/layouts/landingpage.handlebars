@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:400,400i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Blog It Out</title>
+</head>
+
+<body class="flex-column min-100-vh">
+    <nav class="navbar">
+        <ul class="flex-row">
+            <li class="li-inline nav-item"><a href="/">home</a></li>
+            <li class="li-inline nav-item"><a href="/dashboard">landing page</a></li>
+            <li class="li-inline nav-item"><a href="#" id="logout-link">logout</a></li>
+        </ul>
+    </nav>
+    <header class="hero">
+        <h1 class="app-title"><a href="/landingpage">your landing page!</a></h1>
+    </header>
+
+    <main class="col-auto">
+        {{{body}}}
+    </main>
+
+    <footer class="footer flex-row justify-center">
+        <a href="/landingpage/new">➕ new post</a>
+    </footer>
+</body>
+
+<script src="/js/logout.js"></script>
+
+</html>
