@@ -1,0 +1,29 @@
+{
+  "name": "blog-it-out",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/afarr002/Blog-It-Out.git"
+  },
+  "author": "aaron",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/afarr002/Blog-It-Out/issues"
+  },
+  "homepage": "https://github.com/afarr002/Blog-It-Out#readme",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "connect-session-sequelize": "^7.1.2",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.2",
+    "express-handlebars": "^6.0.2",
+    "express-session": "^1.17.2",
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.12.5"
+  }
+}
