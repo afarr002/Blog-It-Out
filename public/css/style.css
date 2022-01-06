@@ -167,6 +167,15 @@ input {
   text-decoration: none;
 }
 
+.p-account {
+  display: inline-block;
+  padding: 1em;
+  margin-bottom: 0.5em;
+  color: var(--dark);
+  border-radius: var(--border-radius);
+  text-decoration: none;
+}
+
 /* CARDS */
 .card {
   margin: 0 0 20px 0;

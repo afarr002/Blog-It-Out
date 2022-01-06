@@ -10,7 +10,7 @@
     <title>Blog It Out</title>
 </head>
 <body class="flex-column min-100-vh">
-    <nav class="navbar">
+    <nav class="navbar flex-row justify-flex-end">
         <ul>
             <li class="li-inline nav-item"><a href="/">home</a></li>
             <li class="li-inline nav-item"><a href="/landingpage">landing page</a></li>
@@ -18,7 +18,7 @@
             <li class="li-inline nav-item"><a href="#" id="logout-link">logout</a></li>
         </ul>
     </nav>
-    <header class="hero">
+    <header class="hero flex-row justify-flex-start">
         <h1 class="app-title"><a href="/">blog it out!</a></h1>
     </header>
 
@@ -26,10 +26,17 @@
         {{{body}}}
     </main>
 
+{{#if loggedIn}}
     <footer class="flex-row justify-center">
         did you get it all off your chest?
         thanks for blogging!
     </footer>
+{{else}}
+    <footer class="flex-row justify-center">
+        need to get something off your chest?
+        sign in to create a blog post!
+    </footer>
+{{/if}}
 </body>
 
 <script src="/js/logout.js"></script>
