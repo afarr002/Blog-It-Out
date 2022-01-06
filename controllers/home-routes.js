@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const { Post, Comment, User } = require("../models");
+const { Post, Comment, User } = require("../models/");
 
 router.get("/", async (req, res) => {
   try {
@@ -7,7 +7,9 @@ router.get("/", async (req, res) => {
       include: [User],
     });
 
-    const allPosts = allPostData.map((singlePost) => post.get({ plain: true }));
+    const allPosts = allPostData.map((singlePost) =>
+      singlePost.get({ plain: true })
+    );
 
     res.render("all-posts", { allPosts });
   } catch (err) {
