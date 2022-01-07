@@ -2,6 +2,7 @@ const router = require("express").Router();
 const { User } = require("../../models/");
 
 router.post("/", async (req, res) => {
+  // console.log(req.body);
   try {
     const newUser = await User.create({
       username: req.body.username,
@@ -28,7 +29,9 @@ router.post("/login", async (req, res) => {
       },
     });
 
-    if (!dbUserData) {
+    console.log(dbUserData);
+
+    if (!dbUserData.username) {
       res.status(400).json({
         message: `No account found for that username!
         Please try again!`,

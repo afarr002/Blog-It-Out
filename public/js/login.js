@@ -1,23 +1,30 @@
 const userLogIn = async (event) => {
   event.preventDefault();
 
-  const usernameInput = document.querySelector("#username-input-login");
-  const passwordInput = document.querySelector("#password-input-login");
+  const usernameInput = document
+    .querySelector("#username-input-login")
+    .value.trim();
+  const passwordInput = document
+    .querySelector("#password-input-login")
+    .value.trim();
 
-  const logIn = await fetch("/api/user/login", {
-    method: "POST",
-    body: JSON.stringify({
-      username: usernameInput.value.trim(),
-      password: passwordInput.value.trim(),
-    }),
-    headers: { "Content-Type": "application/json" },
-  });
+  if (usernameInput && passwordInput) {
+    const response = await fetch("/api/user/login", {
+      method: "POST",
+      body: JSON.stringify({
+        username: usernameInput,
+        password: passwordInput,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+    // console.log(response);
 
-  if (logIn.ok) {
-    document.location.replace("/dashboard");
-  } else {
-    alert(`Something went wrong!
+    if (response.ok) {
+      document.location.replace("/dashboard");
+    } else {
+      alert(`Something went wrong!
       Try again!`);
+    }
   }
 };
 
