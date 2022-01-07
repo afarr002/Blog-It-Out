@@ -14,7 +14,7 @@ const userLogIn = async (event) => {
   });
 
   if (logIn.ok) {
-    document.location.replace("/landingpage");
+    document.location.replace("/dashboard");
   } else {
     alert(`Something went wrong!
       Try again!`);

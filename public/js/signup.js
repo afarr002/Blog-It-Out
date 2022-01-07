@@ -4,7 +4,7 @@ const userSignUp = async (event) => {
   const usernameInput = document.querySelector("#username-input-signup");
   const passwordInput = document.querySelector("#password-input-signup");
 
-  const addUser = await fetch("/api/user", {
+  const addUser = await fetch("/api/user/", {
     method: "POST",
     body: JSON.stringify({
       username: usernameInput.value,
@@ -14,7 +14,7 @@ const userSignUp = async (event) => {
   });
 
   if (addUser.ok) {
-    document.location.replace("/landingpage");
+    document.location.replace("/dashboard");
   } else {
     alert(`Something went wrong!
       Try again!`);

@@ -15,7 +15,7 @@ const editUserPost = async (event) => {
     headers: { "Content-Type": "application/json" },
   });
 
-  document.location.replace("/landingpage");
+  document.location.replace("/dashboard");
 };
 
 const deleteUserPost = async () => {
@@ -23,7 +23,7 @@ const deleteUserPost = async () => {
     method: "DELETE",
   });
 
-  document.location.replace("/landingpage");
+  document.location.replace("/dashboard");
 };
 
 document
